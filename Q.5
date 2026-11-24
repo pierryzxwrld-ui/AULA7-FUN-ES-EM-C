@@ -1,0 +1,19 @@
+#include <stdio.h>
+int ehPar(int num) {
+    if (num % 2 == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+int main() {
+    int num, res;
+    printf("digite um numero :");
+    scanf("%d", &num);
+    res = ehPar(num);
+    if (res == 1) {
+        printf("par\n");
+    } else {
+        printf("impar\n");
+    }
+}
