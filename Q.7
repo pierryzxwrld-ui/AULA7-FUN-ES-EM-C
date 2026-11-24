@@ -1,0 +1,23 @@
+#include <stdio.h>
+float calcularMedia(float n1, float n2, float n3) {
+    return (n1 + n2 + n3) / 3;
+}
+void verificarSituacao(float media) {
+    if (media >= 7.0) {
+        printf("aprovado\n");
+    } else {
+        printf("reprovado\n");
+    }
+}
+int main() {
+    float n1, n2, n3, media;
+    printf("digite a nota 1 :");
+    scanf("%f", &n1);
+    printf("digite a nota 2 :");
+    scanf("%f", &n2);
+    printf("digite a nota 3 :");
+    scanf("%f", &n3);
+    media = calcularMedia(n1, n2, n3);
+    printf("media: %.2f\n", media);
+    verificarSituacao(media);
+}
