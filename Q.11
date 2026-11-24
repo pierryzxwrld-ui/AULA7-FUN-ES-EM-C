@@ -1,0 +1,45 @@
+#include <stdio.h>
+float calcularMediaTurma(float notas[], int qtd) {
+    float soma = 0;
+    int cont;
+    for (cont=0 ; cont<qtd ; cont++) {
+        soma = soma + notas[cont];
+    }
+    return soma / qtd;
+}
+float encontrarMaiorNota(float notas[], int qtd) {
+    float maior = notas[0];
+    int cont;
+    for (cont=1 ; cont<qtd ; cont++) {
+        if (notas[cont] > maior) {
+            maior = notas[cont];
+        }
+    }
+    return maior;
+}
+int contarAprovados(float notas[], int qtd) {
+    int cont, aprovados = 0;
+    for (cont=0 ; cont<qtd ; cont++) {
+        if (notas[cont] >= 7.0) {
+            aprovados++;
+        }
+    }
+    return aprovados;
+}
+void exibirResultados(float media, float maior, int aprovados) {
+    printf("media da turma: %.2f\n", media);
+    printf("maior nota: %.2f\n", maior);
+    printf("aprovados: %d\n", aprovados);
+}
+int main() {
+    float notas[10], media, maior;
+    int cont, aprovados;
+    for (cont=0 ; cont<10 ; cont++) {
+        printf("digite a nota do aluno %d :", cont+1);
+        scanf("%f", ¬as[cont]);
+    }
+    media = calcularMediaTurma(notas, 10);
+    maior = encontrarMaiorNota(notas, 10);
+    aprovados = contarAprovados(notas, 10);
+    exibirResultados(media, maior, aprovados);
+}
