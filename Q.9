@@ -1,0 +1,13 @@
+#include <stdio.h>
+void mostrarTabuada(int num) {
+    int cont;
+    for (cont=1 ; cont<=10 ; cont++) {
+        printf("%d x %d = %d\n", num, cont, num * cont);
+    }
+}
+int main() {
+    int num;
+    printf("digite um numero :");
+    scanf("%d", &num);
+    mostrarTabuada(num);
+}
