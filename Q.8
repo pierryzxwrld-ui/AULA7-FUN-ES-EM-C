@@ -1,0 +1,24 @@
+#include <stdio.h>
+int ehPrimo(int num) {
+    int cont;
+    if (num < 2) {
+        return 0;
+    }
+    for (cont=2 ; cont*cont<=num ; cont++) {
+        if (num % cont == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+int main() {
+    int num, res;
+    printf("digite um numero :");
+    scanf("%d", &num);
+    res = ehPrimo(num);
+    if (res == 1) {
+        printf("eh primo\n");
+    } else {
+        printf("nao eh primo\n");
+    }
+}
